@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VN-VPN — Brayden Herrell</title>
+  <meta name="description" content="A self-hosted WireGuard VPN service you can sell: a management panel, server agents, a customer portal, and Stripe billing.">
+  <meta property="og:title" content="VN-VPN — Brayden Herrell">
+  <meta property="og:description" content="A self-hosted WireGuard VPN service you can sell: a management panel, server agents, a customer portal, and Stripe billing.">
+  <meta name="theme-color" content="#0B1220">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top wrap">
+    <a class="mark" href="/">Brayden Herrell</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/#networks">Networks</a></li>
+        <li><a href="/#experience">Experience</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/#certifications">Certifications</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap detail">
+    <p class="crumb"><a href="/projects/">← All projects</a></p>
+    <header class="detail-head">
+      <p class="eyebrow">Infrastructure &amp; networking</p>
+      <h1>VN-VPN</h1>
+      <p class="lede">A self-hosted WireGuard VPN service you can sell: a management panel, server agents, a customer portal, and Stripe billing.</p>
+      <div class="detail-meta">
+        <ul class="tags"><li>WireGuard</li><li>FastAPI</li><li>SQLite</li><li>Stripe</li><li>Docker</li><li>Linux</li></ul>
+        <div class="detail-links"><a class="btn primary" href="https://github.com/iambrayden/vn-vpn">View source on GitHub ↗</a></div>
+      </div>
+    </header>
+
+      <div class="gallery">
+        <figure class="shot lead">
+          <img src="portal.jpg" alt="VN-VPN: Customer portal" loading="eager">
+          <figcaption>Customer portal</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="admin.jpg" alt="VN-VPN: Admin dashboard" loading="lazy">
+          <figcaption>Admin dashboard</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="add-server.jpg" alt="VN-VPN: Add-server wizard" loading="lazy">
+          <figcaption>Add-server wizard</figcaption>
+        </figure>
+      </div>
+
+      <section class="detail-block" aria-labelledby="about">
+        <h2 id="about">About</h2>
+        <p>VN-VPN turns any number of Linux servers into one VPN service. The panel runs in a single container; each server runs a small agent that installs WireGuard, registers with the panel, and syncs its peer list every 15 seconds without dropping connected tunnels.</p>
+        <p>Every device gets its own key pair and can use every location. Agents only allow devices that are paid up and within their plan&#x27;s connection limit, and servers keep running on their last config if the panel goes down.</p>
+      </section>
+
+      <section class="detail-block" aria-labelledby="features">
+        <h2 id="features">What it does</h2>
+        <ul class="features">
+          <li><strong>Node agent.</strong> One command turns a fresh VPS into a VPN node. The server&#x27;s private key is generated on the server and never leaves it.</li>
+          <li><strong>Customer portal.</strong> Sign-up, a guided setup for each device type, and location picks by flag with live load and a recommended server.</li>
+          <li><strong>Subscriptions.</strong> Stripe Checkout, plan upgrades, and the Stripe Customer Portal. Basic allows one device at a time, Pro allows five.</li>
+          <li><strong>Monitoring.</strong> CPU, memory, disk, bandwidth, and connected devices per server, with 1h / 24h / 7d charts and Discord or Slack alerts.</li>
+          <li><strong>Leak protection.</strong> IPv6 is routed into the tunnel and dropped, MTU is set to 1380, and servers clamp TCP MSS.</li>
+          <li><strong>Provisioning API.</strong> Other systems can create, suspend, and delete users and grant plans.</li>
+        </ul>
+      </section>
+
+      <nav class="pager" aria-label="More projects">
+        <span></span>
+        <a class="next" href="/projects/postbound/"><span>Next</span>Postbound</a>
+      </nav>
+  </main>
+
+  <footer class="foot wrap">
+    <span>© <span id="year">2026</span> Brayden Herrell</span>
+    <span>St. Louis, MO</span>
+  </footer>
+
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>

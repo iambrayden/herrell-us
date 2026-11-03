@@ -25,6 +25,14 @@ The repo is connected to Cloudflare (Workers & Pages → Import a repository) wi
 
 Custom domain: in the Worker's Settings → Domains & Routes, add `herrell.us` (and `www.herrell.us` if you want it).
 
-Adding a page: create a folder such as `public/projects/index.html`; it is served at `/projects/`.
+## Projects
+
+Project pages are generated. Edit the `PROJECTS` list in `scripts/build_projects.py`, put any screenshots in `public/projects/<slug>/`, then run:
+
+```
+python3 scripts/build_projects.py
+```
+
+It writes `public/projects/<slug>/index.html` for each project, the `/projects/` index, and refreshes the project cards on the homepage (between the `projects:start` / `projects:end` markers). Commit the generated files; Cloudflare serves them as-is.
 
 Photo: the hero headshot is `public/assets/photo.jpg` (square).

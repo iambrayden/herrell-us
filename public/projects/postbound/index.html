@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Postbound — Brayden Herrell</title>
+  <meta name="description" content="A managed SMTP relay for support teams sending tickets, replies, and invoices.">
+  <meta property="og:title" content="Postbound — Brayden Herrell">
+  <meta property="og:description" content="A managed SMTP relay for support teams sending tickets, replies, and invoices.">
+  <meta name="theme-color" content="#0B1220">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top wrap">
+    <a class="mark" href="/">Brayden Herrell</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/#networks">Networks</a></li>
+        <li><a href="/#experience">Experience</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/#certifications">Certifications</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap detail">
+    <p class="crumb"><a href="/projects/">← All projects</a></p>
+    <header class="detail-head">
+      <p class="eyebrow">Infrastructure &amp; networking</p>
+      <h1>Postbound</h1>
+      <p class="lede">A managed SMTP relay for support teams sending tickets, replies, and invoices.</p>
+      <div class="detail-meta">
+        <ul class="tags"><li>SMTP</li><li>DKIM / SPF / DMARC</li><li>Node.js</li><li>SQLite</li></ul>
+        <div class="detail-links"><span class="note">Source code is private</span></div>
+      </div>
+    </header>
+
+
+      <section class="detail-block" aria-labelledby="about">
+        <h2 id="about">About</h2>
+        <p>Postbound gives a team its own outbound mail service with the deliverability pieces handled: DKIM keys are generated per domain, the dashboard walks you through SPF, DKIM, and DMARC records, and it checks DNS until the domain verifies.</p>
+        <p>It runs on a single Debian or Ubuntu server with an installer, stores everything in SQLite, and can optionally hand mail off to SendGrid, Amazon SES, or another upstream relay.</p>
+      </section>
+
+      <section class="detail-block" aria-labelledby="features">
+        <h2 id="features">What it does</h2>
+        <ul class="features">
+          <li><strong>SMTP and HTTP.</strong> SMTP on port 587 with STARTTLS and user logins, plus an HTTP send API with API keys.</li>
+          <li><strong>Domain setup.</strong> Automatic DKIM key pairs, an SPF / DKIM / DMARC record wizard, and live verification status.</li>
+          <li><strong>Activity log.</strong> A searchable, filterable log of every message sent.</li>
+          <li><strong>Suppression list.</strong> Stops sending to addresses that bounced or unsubscribed.</li>
+          <li><strong>Limits and keys.</strong> Multiple SMTP users with daily limits, and API keys restricted to specific domains.</li>
+          <li><strong>Dashboard.</strong> A dark-mode web UI with live stats and charts.</li>
+        </ul>
+      </section>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="/projects/vn-vpn/"><span>Previous</span>VN-VPN</a>
+        <a class="next" href="/projects/waymail-security/"><span>Next</span>WayMail Security</a>
+      </nav>
+  </main>
+
+  <footer class="foot wrap">
+    <span>© <span id="year">2026</span> Brayden Herrell</span>
+    <span>St. Louis, MO</span>
+  </footer>
+
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>
