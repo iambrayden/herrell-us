@@ -23,9 +23,9 @@
     <a class="mark" href="/"><span class="dim">bh@</span>herrell.us<span class="dim">:~$</span></a>
     <nav aria-label="Primary">
       <ul>
+        <li><a href="#experience">/experience</a></li>
+        <li><a href="#certs">/certs</a></li>
         <li><a href="/portfolio/">/portfolio</a></li>
-        <li><a href="/projects/">/projects</a></li>
-        <li><a href="/writing/">/writing</a></li>
         <li><a href="#contact">/contact</a></li>
       </ul>
     </nav>
@@ -34,13 +34,18 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="name">
       <div class="hero-text">
-        <p class="eyebrow">// network &amp; software engineer</p>
+        <!-- Headshot: save it as assets/photo.jpg (square). Initials show until then. -->
+        <div class="avatar">
+          <span aria-hidden="true">BH</span>
+          <img src="/assets/photo.jpg" alt="Brayden Herrell" onerror="this.remove()">
+        </div>
+        <p class="eyebrow">// network &amp; infrastructure engineer · St. Louis, MO</p>
         <h1 id="name">Brayden Herrell</h1>
         <p class="lede">
-          I build networks and the software that runs on them. herrell.us is my home base: the work, the side projects, the notes, and how to reach me.
+          Sr. IT Solutions Engineer, and President of Global Operations at Valor Node, where we run colocation, dedicated servers, and IP transit behind our own DDoS mitigation. herrell.us is where I keep the work, the side projects, and the notes.
         </p>
         <p class="cta">
-          <a class="btn primary" href="/portfolio/">View portfolio</a>
+          <a class="btn primary" href="#experience">See experience</a>
           <a class="btn" href="#contact">Get in touch</a>
         </p>
       </div>
@@ -71,7 +76,7 @@
           <g class="node core">
             <rect x="14" y="186" width="156" height="68" rx="8"/>
             <text x="30" y="214" class="n-title">herrell.us</text>
-            <text x="30" y="236" class="n-sub">core-01 · edge</text>
+            <text x="30" y="236" class="n-sub">core-01 · AS207169</text>
             <circle cx="152" cy="208" r="4.5" class="led up"/>
           </g>
 
@@ -107,6 +112,137 @@
           </g></a>
         </svg>
       </figure>
+    </section>
+
+    <section class="experience wrap" id="experience" aria-labelledby="exp-title">
+      <h2 id="exp-title" class="prompt"><span class="dim">bh@herrell.us:~$</span> traceroute brayden</h2>
+      <p class="trace-note">traceroute to brayden (herrell.us), 4 hops, oldest first</p>
+
+      <ol class="hops">
+        <li class="hop">
+          <span class="hop-n" aria-hidden="true">1</span>
+          <div class="hop-body">
+            <div class="hop-head">
+              <h3>President, Global Operations</h3>
+              <span class="when">Nov 2020 – present <span class="active">active</span></span>
+            </div>
+            <p class="org">Valor Node · St. Louis, MO · Hybrid</p>
+            <p>Infrastructure provider for colocation, dedicated servers, cloud compute, and IP transit. The network was custom built for in-house DDoS mitigation and scrubbing, with multiple 100G lines at most facilities and 400G capacity at select locations.</p>
+            <ul class="tags" aria-label="Points of presence">
+              <li>St. Louis</li><li>Kansas City</li><li>Dallas</li><li>New York</li><li>Miami</li><li>Los Angeles</li><li>Kent, UK</li>
+            </ul>
+          </div>
+        </li>
+        <li class="hop">
+          <span class="hop-n" aria-hidden="true">2</span>
+          <div class="hop-body">
+            <div class="hop-head">
+              <h3>Operations Analyst</h3>
+              <span class="when">Oct 2022 – Nov 2023</span>
+            </div>
+            <p class="org">Oracle · Kansas City, MO</p>
+          </div>
+        </li>
+        <li class="hop">
+          <span class="hop-n" aria-hidden="true">3</span>
+          <div class="hop-body">
+            <div class="hop-head">
+              <h3>Tier II Engineer</h3>
+              <span class="when">Oct 2024 – Apr 2025</span>
+            </div>
+            <p class="org">Essential Network Technologies · St. Peters, MO</p>
+            <p>Designed, implemented, and maintained the internal network and the networks of the entire client base for performance, security, and reliability.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>SD-WAN</li><li>LAN / WLAN</li><li>VLAN</li><li>MPLS</li><li>IPsec VPN</li><li>PtP</li><li>Fortinet</li><li>SonicWall</li><li>Extreme Networks</li>
+            </ul>
+          </div>
+        </li>
+        <li class="hop">
+          <span class="hop-n" aria-hidden="true">4</span>
+          <div class="hop-body">
+            <div class="hop-head">
+              <h3>Sr. IT Solutions Engineer</h3>
+              <span class="when">Mar 2026 – present <span class="active">active</span></span>
+            </div>
+            <p class="org">St. Louis, MO</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="bgp wrap" id="bgp" aria-labelledby="bgp-title">
+      <h2 id="bgp-title" class="prompt"><span class="dim">bh@herrell.us:~$</span> show bgp autonomous-systems</h2>
+      <ul class="asns">
+        <li><a href="https://bgp.tools/as/33755">
+          <span class="asn">AS33755</span>
+          <span class="as-name">VALORNODE</span>
+          <span class="as-org">Valor Holdings LLC · the Valor Node network</span>
+          <span class="as-link">bgp.tools/as/33755 ↗</span>
+        </a></li>
+        <li><a href="https://bgp.tools/as/207169">
+          <span class="asn">AS207169</span>
+          <span class="as-name">Brayden-Net</span>
+          <span class="as-org">Brayden Herrell · personal network</span>
+          <span class="as-link">bgp.tools/as/207169 ↗</span>
+        </a></li>
+      </ul>
+    </section>
+
+    <section class="certs wrap" id="certs" aria-labelledby="certs-title">
+      <h2 id="certs-title" class="prompt"><span class="dim">bh@herrell.us:~$</span> show certifications</h2>
+
+      <div class="cert-groups">
+        <div class="cert-group">
+          <h3># networking</h3>
+          <ul>
+            <li><strong>IPv6 Certified, Sage Level</strong><span>Hurricane Electric</span></li>
+            <li><strong>Introduction to Networking (CS1015)</strong><span>Sophia Learning · May 2024</span></li>
+            <li><strong>Introduction to Information Technology (CS1001)</strong><span>Sophia Learning · Sep 2023</span></li>
+          </ul>
+          <h3># platforms</h3>
+          <ul>
+            <li><strong>cPanel Professional</strong><span>cPanel · Oct 2026</span></li>
+            <li><strong>Microsoft Partner</strong><span>Microsoft</span></li>
+          </ul>
+        </div>
+        <div class="cert-group">
+          <h3># extreme networks</h3>
+          <ul>
+            <li><strong>Associate: Building Scalable and Mission Critical Networks</strong><span>Feb 2025</span></li>
+            <li><strong>Associate: Building Secure and Robust Wireless Networks</strong><span>Feb 2025</span></li>
+            <li><strong>Certified Associate in ExtremeControl</strong><span>Feb 2025</span></li>
+            <li><strong>Certified Associate in Extreme Fabric Connect</strong><span>Feb 2025</span></li>
+            <li><strong>Certified Associate in Network Security Basics</strong><span>Feb 2025</span></li>
+            <li><strong>Certified Associate in ExtremeCloud IQ</strong><span>Feb 2025</span></li>
+            <li><strong>Certified Associate in ExtremeCloud IQ – Site Engine</strong><span>Feb 2025</span></li>
+            <li><strong>Certified Associate in Extreme Switching</strong><span>Feb 2025</span></li>
+            <li><strong>Certified Associate in Solutions Design</strong><span>Feb 2025</span></li>
+            <li><strong>Associate: Introduction to Future Networking</strong><span>Jan 2025</span></li>
+          </ul>
+        </div>
+        <div class="cert-group">
+          <h3># security</h3>
+          <ul>
+            <li><strong>Fortinet Certified Associate Cybersecurity</strong><span>Fortinet · Dec 2024 · expires Dec 2026</span></li>
+            <li><strong>Fortinet Certified Fundamentals Cybersecurity</strong><span>Fortinet · Dec 2024 · expires Dec 2026</span></li>
+            <li><strong>FortiGate 7.4 Operator</strong><span>Fortinet · Dec 2024</span></li>
+            <li><strong>Introduction to the Threat Landscape 2.0</strong><span>Fortinet · Dec 2024</span></li>
+            <li><strong>Getting Started in Cybersecurity 2.0</strong><span>Fortinet · Dec 2024</span></li>
+            <li><strong>Certified AI Email Security Specialist</strong><span>Proofpoint</span></li>
+          </ul>
+        </div>
+        <div class="cert-group">
+          <h3># emergency management</h3>
+          <ul>
+            <li><strong>IS-200.c: Basic Incident Command System for Initial Response</strong><span>FEMA · Jul 2026</span></li>
+            <li><strong>IS-244.b: Developing and Managing Volunteers</strong><span>FEMA · Jul 2026</span></li>
+            <li><strong>IS-700.b: Introduction to the National Incident Management System</strong><span>FEMA · Jul 2026</span></li>
+            <li><strong>IS-800.d: National Response Framework, An Introduction</strong><span>FEMA · Jul 2026</span></li>
+            <li><strong>IS-909: Community Preparedness</strong><span>FEMA · Jul 2026</span></li>
+            <li><strong>IS-2200: Basic Emergency Operations Center Functions</strong><span>FEMA · Jul 2026</span></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="ifaces wrap" aria-labelledby="ifaces-title">
@@ -158,7 +294,7 @@
 
     <section class="contact wrap" id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
-      <p>Questions, projects, or just comparing notes on a network design: send me a message.</p>
+      <p>Questions about infrastructure, a project, or just comparing notes on a network design: send me a message.</p>
       <div class="term">
         <p class="prompt"><span class="dim">bh@herrell.us:~$</span> whois brayden</p>
         <dl>
