@@ -3,25 +3,28 @@
 Static homepage: plain HTML, CSS and JS, no build step.
 
 ```
-index.html          homepage
-404.html            shown for any page that doesn't exist yet
-assets/styles.css   all styles (colors and fonts are tokens at the top)
-assets/main.js      footer year
-favicon.svg
+wrangler.jsonc             Cloudflare config (serves ./public)
+public/index.html          homepage
+public/404.html            shown for any page that doesn't exist yet
+public/assets/styles.css   all styles (colors and fonts are tokens at the top)
+public/assets/main.js      footer year
+public/favicon.svg
 ```
 
-Preview locally: `python3 -m http.server 8000` in this folder, then open http://localhost:8000.
+Preview locally: `python3 -m http.server 8000 -d public`, then open http://localhost:8000.
 
-## Deploy (GitHub + Cloudflare Pages)
+## Deploy (GitHub + Cloudflare)
 
-1. Push this folder to a GitHub repository (these files at the repo root).
-2. In Cloudflare: Workers & Pages → Create → Pages → Connect to Git, then pick the repo.
-3. Build settings: framework preset **None**, build command **empty**, build output directory **/**.
-4. Deploy. Every push to the main branch redeploys; other branches get preview URLs.
-5. In the Pages project: Custom domains → add `herrell.us` (and `www.herrell.us` if you want it). If the domain's DNS is already on Cloudflare, the records are added for you.
+The repo is connected to Cloudflare (Workers & Pages → Import a repository) with:
 
-Cloudflare Pages serves `404.html` automatically for missing pages.
+- Build command: empty
+- Deploy command: `npx wrangler deploy`
+- Preview command: `npx wrangler preview`
 
-Adding a section: create a folder such as `portfolio/index.html`, then edit that section's card in `index.html` (remove its `stamp` once the page is live).
+`wrangler.jsonc` tells Cloudflare to serve everything in `public/` as static files and to use `public/404.html` for missing pages. Every push to `main` redeploys; other branches get preview builds.
 
-Photo: drop a square image at `assets/photo.jpg` and it replaces the initials in the hero portrait.
+Custom domain: in the Worker's Settings → Domains & Routes, add `herrell.us` (and `www.herrell.us` if you want it).
+
+Adding a section: create a folder such as `public/portfolio/index.html`, then edit that section's card in `public/index.html` (remove its `stamp` once the page is live).
+
+Photo: drop a square image at `public/assets/photo.jpg` and it replaces the initials in the hero portrait.
