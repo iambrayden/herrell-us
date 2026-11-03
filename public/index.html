@@ -3,30 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brayden Herrell — herrell.us</title>
-  <meta name="description" content="Brayden Herrell, network and infrastructure engineer in St. Louis: experience, networks, certifications, and how to get in touch.">
-  <meta property="og:title" content="Brayden Herrell">
-  <meta property="og:description" content="Network and infrastructure engineer in St. Louis. President of Global Operations at Valor Node.">
+  <title>Brayden Herrell — Network Engineer</title>
+  <meta name="description" content="Brayden Herrell, network engineer in St. Louis. President of Global Operations at Valor Node (AS33755).">
+  <meta property="og:title" content="Brayden Herrell — Network Engineer">
+  <meta property="og:description" content="Network engineer in St. Louis. President of Global Operations at Valor Node (AS33755).">
   <meta property="og:url" content="https://herrell.us/">
   <meta property="og:image" content="https://herrell.us/assets/photo.jpg">
   <meta name="theme-color" content="#0B1220">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="top wrap">
-    <a class="mark" href="/">herrell.us</a>
+    <a class="mark" href="/">Brayden Herrell</a>
     <nav aria-label="Primary">
       <ul>
-        <li><a href="#experience">experience</a></li>
-        <li><a href="#networks">networks</a></li>
-        <li><a href="#certs">certs</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#networks">Networks</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -34,79 +35,58 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="name">
       <div class="hero-text">
-        <img class="avatar" src="/assets/photo.jpg" alt="Brayden Herrell" width="88" height="88">
-        <p class="eyebrow">Network &amp; infrastructure engineer · St. Louis, MO</p>
+        <p class="eyebrow">Network engineer · St. Louis, MO</p>
         <h1 id="name">Brayden Herrell</h1>
         <p class="lede">
-          Sr. IT Solutions Engineer, and President of Global Operations at Valor Node, where we run colocation, dedicated servers, and IP transit behind our own DDoS mitigation.
+          I design, build, and run networks. As President of Global Operations at Valor Node, I run our own network on AS33755: colocation, dedicated servers, and IP transit across seven locations, with 100G and 400G links and in-house DDoS mitigation. By day I'm a Sr. IT Solutions Engineer.
         </p>
         <p class="cta">
-          <a class="btn primary" href="#experience">See experience</a>
+          <a class="btn primary" href="#networks">See my networks</a>
           <a class="btn" href="#contact">Get in touch</a>
         </p>
       </div>
+      <img class="portrait" src="/assets/photo.jpg" alt="Brayden Herrell" width="400" height="400">
+    </section>
 
-      <figure class="topo" aria-hidden="true">
-        <svg viewBox="0 0 520 440" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <path id="l1" d="M170 220 C 250 220, 240 50, 320 50"/>
-            <path id="l2" d="M170 220 C 250 220, 240 135, 320 135"/>
-            <path id="l3" d="M170 220 C 250 220, 240 220, 320 220"/>
-            <path id="l4" d="M170 220 C 250 220, 240 305, 320 305"/>
-            <path id="l5" d="M170 220 C 250 220, 240 390, 320 390"/>
-          </defs>
+    <section class="section wrap" id="networks" aria-labelledby="net-title">
+      <header class="section-head">
+        <h2 id="net-title">Networks</h2>
+        <p>Autonomous systems I operate</p>
+      </header>
 
-          <use href="#l1" class="link prov"/>
-          <use href="#l2" class="link planned"/>
-          <use href="#l3" class="link planned"/>
-          <use href="#l4" class="link planned"/>
-          <use href="#l5" class="link up"/>
+      <ul class="asns">
+        <li><a href="https://bgp.tools/as/33755">
+          <span class="asn">AS33755</span>
+          <span class="as-name">Valor Node</span>
+          <span class="as-org">Valor Holdings LLC · production network</span>
+          <span class="as-link">View on bgp.tools ↗</span>
+        </a></li>
+        <li><a href="https://bgp.tools/as/207169">
+          <span class="asn">AS207169</span>
+          <span class="as-name">Brayden-Net</span>
+          <span class="as-org">Personal network</span>
+          <span class="as-link">View on bgp.tools ↗</span>
+        </a></li>
+      </ul>
 
-          <circle class="packet" r="3.5"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#l1"/></animateMotion></circle>
-          <circle class="packet" r="3.5"><animateMotion dur="3.1s" repeatCount="indefinite" begin=".7s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#l2"/></animateMotion></circle>
-          <circle class="packet" r="3.5"><animateMotion dur="2.2s" repeatCount="indefinite" begin="1.3s"><mpath href="#l3"/></animateMotion></circle>
-          <circle class="packet" r="3.5"><animateMotion dur="2.9s" repeatCount="indefinite" begin=".3s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#l4"/></animateMotion></circle>
-          <circle class="packet up" r="3.5"><animateMotion dur="1.8s" repeatCount="indefinite" begin="1s"><mpath href="#l5"/></animateMotion></circle>
-
-          <g class="node core">
-            <rect x="14" y="186" width="156" height="68" rx="8"/>
-            <text x="30" y="214" class="n-title">herrell.us</text>
-            <text x="30" y="236" class="n-sub">core-01 · AS207169</text>
-            <circle cx="152" cy="208" r="4.5" class="led up"/>
-          </g>
-
-          <a href="/portfolio/" tabindex="-1"><g class="node">
-            <rect x="320" y="24" width="186" height="52" rx="8"/>
-            <text x="336" y="47" class="n-title">/portfolio</text>
-            <text x="336" y="64" class="n-sub">gi0/1 · provisioning</text>
-            <circle cx="490" cy="42" r="4.5" class="led prov"/>
-          </g></a>
-          <a href="/projects/" tabindex="-1"><g class="node">
-            <rect x="320" y="109" width="186" height="52" rx="8"/>
-            <text x="336" y="132" class="n-title">/projects</text>
-            <text x="336" y="149" class="n-sub">gi0/2 · planned</text>
-            <circle cx="490" cy="127" r="4.5" class="led planned"/>
-          </g></a>
-          <a href="/writing/" tabindex="-1"><g class="node">
-            <rect x="320" y="194" width="186" height="52" rx="8"/>
-            <text x="336" y="217" class="n-title">/writing</text>
-            <text x="336" y="234" class="n-sub">gi0/3 · planned</text>
-            <circle cx="490" cy="212" r="4.5" class="led planned"/>
-          </g></a>
-          <a href="/now/" tabindex="-1"><g class="node">
-            <rect x="320" y="279" width="186" height="52" rx="8"/>
-            <text x="336" y="302" class="n-title">/now</text>
-            <text x="336" y="319" class="n-sub">gi0/4 · planned</text>
-            <circle cx="490" cy="297" r="4.5" class="led planned"/>
-          </g></a>
-          <a href="#contact" tabindex="-1"><g class="node">
-            <rect x="320" y="364" width="186" height="52" rx="8"/>
-            <text x="336" y="387" class="n-title">/contact</text>
-            <text x="336" y="404" class="n-sub">gi0/5 · up</text>
-            <circle cx="490" cy="382" r="4.5" class="led up"/>
-          </g></a>
-        </svg>
-      </figure>
+      <dl class="footprint">
+        <div>
+          <dt>Locations</dt>
+          <dd>St. Louis, Kansas City, Dallas, New York, Miami, Los Angeles, and Kent, UK</dd>
+        </div>
+        <div>
+          <dt>Capacity</dt>
+          <dd>Multiple 100G lines at most facilities, 400G at select locations</dd>
+        </div>
+        <div>
+          <dt>Protection</dt>
+          <dd>In-house DDoS mitigation and scrubbing for our infrastructure and customers</dd>
+        </div>
+        <div>
+          <dt>Services</dt>
+          <dd>Colocation, dedicated servers, cloud compute, and IP transit</dd>
+        </div>
+      </dl>
     </section>
 
     <section class="section wrap" id="experience" aria-labelledby="exp-title">
@@ -128,9 +108,9 @@
             <span class="when">Oct 2024 – Apr 2025</span>
           </div>
           <p class="org">Essential Network Technologies · St. Peters, MO</p>
-          <p class="job-desc">Designed, implemented, and maintained the internal network and the networks of the entire client base for performance, security, and reliability.</p>
+          <p class="job-desc">Designed, implemented, and maintained the internal network and the networks of the entire client base for performance, security, and reliability, mostly on Fortinet, SonicWall, and Extreme Networks.</p>
           <ul class="tags" aria-label="Technologies">
-            <li>SD-WAN</li><li>LAN / WLAN</li><li>VLAN</li><li>MPLS</li><li>IPsec VPN</li><li>PtP</li><li>Fortinet</li><li>SonicWall</li><li>Extreme Networks</li>
+            <li>SD-WAN</li><li>LAN / WLAN</li><li>VLANs</li><li>MPLS</li><li>IPsec VPN</li><li>Point-to-point</li><li>Fortinet</li><li>SonicWall</li><li>Extreme Networks</li>
           </ul>
         </li>
         <li class="job">
@@ -146,43 +126,54 @@
             <span class="when">Nov 2020 – Present</span>
           </div>
           <p class="org">Valor Node · St. Louis, MO</p>
-          <p class="job-desc">Infrastructure provider for colocation, dedicated servers, cloud compute, and IP transit. The network was custom built for in-house DDoS mitigation and scrubbing, with multiple 100G lines at most facilities and 400G capacity at select locations.</p>
-          <ul class="tags" aria-label="Locations">
-            <li>St. Louis</li><li>Kansas City</li><li>Dallas</li><li>New York</li><li>Miami</li><li>Los Angeles</li><li>Kent, UK</li>
-          </ul>
+          <p class="job-desc">Run an infrastructure provider offering colocation, dedicated servers, cloud compute, and IP transit. The network was custom built for in-house DDoS mitigation and scrubbing.</p>
         </li>
       </ol>
     </section>
 
-    <section class="section wrap" id="networks" aria-labelledby="net-title">
+    <section class="section wrap" id="projects" aria-labelledby="proj-title">
       <header class="section-head">
-        <h2 id="net-title">Networks</h2>
-        <p>Autonomous systems I operate, on bgp.tools.</p>
+        <h2 id="proj-title">Projects</h2>
+        <p><a href="https://github.com/iambrayden">More on GitHub ↗</a></p>
       </header>
-      <ul class="asns">
-        <li><a href="https://bgp.tools/as/33755">
-          <span class="asn">AS33755</span>
-          <span class="as-name">VALORNODE</span>
-          <span class="as-org">Valor Holdings LLC</span>
-          <span class="as-link">bgp.tools/as/33755 ↗</span>
-        </a></li>
-        <li><a href="https://bgp.tools/as/207169">
-          <span class="asn">AS207169</span>
-          <span class="as-name">Brayden-Net</span>
-          <span class="as-org">Personal network</span>
-          <span class="as-link">bgp.tools/as/207169 ↗</span>
-        </a></li>
+
+      <ul class="projects">
+        <li class="project">
+          <h3><a href="https://github.com/iambrayden/vn-vpn">VN-VPN</a></h3>
+          <p>A self-hosted WireGuard VPN service. A management panel, a one-command agent that turns any Linux server into a VPN node, a customer portal with Stripe subscriptions, and per-server monitoring with alerts.</p>
+          <ul class="tags"><li>WireGuard</li><li>FastAPI</li><li>Stripe</li><li>Linux</li></ul>
+        </li>
+        <li class="project">
+          <h3><a href="https://github.com/iambrayden/CVE-2024-23113">FortiGate CVE-2024-23113 scanner</a></h3>
+          <p>Checks a list of client IPs for FortiGate devices exposed to CVE-2024-23113, so you can find and patch them before someone else does.</p>
+          <ul class="tags"><li>Python</li><li>Fortinet</li><li>Security</li></ul>
+        </li>
+        <li class="project">
+          <h3><a href="https://github.com/iambrayden/BGP">BGP toolkit</a></h3>
+          <p>Sets up a Debian box for BGP: installs bgpq4, BIRD, and Pathvector and turns on IPv4 forwarding.</p>
+          <ul class="tags"><li>BGP</li><li>BIRD</li><li>Pathvector</li></ul>
+        </li>
+        <li class="project">
+          <h3><a href="https://github.com/iambrayden/dns">DNS block lists</a></h3>
+          <p>Valor Node's curated block lists for malicious domains, newly registered domains, and adult content.</p>
+          <ul class="tags"><li>DNS</li><li>Security</li></ul>
+        </li>
+        <li class="project">
+          <h3><a href="https://github.com/iambrayden/ProxUI">ProxUI</a></h3>
+          <p>A better way to manage Proxmox.</p>
+          <ul class="tags"><li>Proxmox</li><li>Virtualization</li></ul>
+        </li>
       </ul>
     </section>
 
-    <section class="section wrap" id="certs" aria-labelledby="certs-title">
+    <section class="section wrap" id="certifications" aria-labelledby="certs-title">
       <header class="section-head">
         <h2 id="certs-title">Certifications</h2>
       </header>
 
       <div class="certs">
         <div class="cert-row">
-          <h3># networking</h3>
+          <h3>Networking</h3>
           <ul>
             <li><strong>IPv6 Certified, Sage Level</strong><span>Hurricane Electric</span></li>
             <li><strong>Introduction to Networking (CS1015)</strong><span>Sophia Learning · May 2024</span></li>
@@ -190,7 +181,7 @@
           </ul>
         </div>
         <div class="cert-row">
-          <h3># extreme networks</h3>
+          <h3>Extreme Networks</h3>
           <ul>
             <li><strong>Building Scalable and Mission Critical Networks</strong><span>Associate · Feb 2025</span></li>
             <li><strong>Building Secure and Robust Wireless Networks</strong><span>Associate · Feb 2025</span></li>
@@ -205,7 +196,7 @@
           </ul>
         </div>
         <div class="cert-row">
-          <h3># fortinet</h3>
+          <h3>Fortinet</h3>
           <ul>
             <li><strong>Fortinet Certified Associate Cybersecurity</strong><span>Dec 2024 · expires Dec 2026</span></li>
             <li><strong>Fortinet Certified Fundamentals Cybersecurity</strong><span>Dec 2024 · expires Dec 2026</span></li>
@@ -215,20 +206,20 @@
           </ul>
         </div>
         <div class="cert-row">
-          <h3># security</h3>
+          <h3>Security</h3>
           <ul>
             <li><strong>Certified AI Email Security Specialist</strong><span>Proofpoint</span></li>
           </ul>
         </div>
         <div class="cert-row">
-          <h3># platforms</h3>
+          <h3>Platforms</h3>
           <ul>
             <li><strong>cPanel Professional</strong><span>cPanel · Oct 2026</span></li>
             <li><strong>Microsoft Partner</strong><span>Microsoft</span></li>
           </ul>
         </div>
         <div class="cert-row">
-          <h3># emergency management</h3>
+          <h3>Emergency management</h3>
           <ul>
             <li><strong>IS-200.c: Basic Incident Command System for Initial Response</strong><span>FEMA · Jul 2026</span></li>
             <li><strong>IS-244.b: Developing and Managing Volunteers</strong><span>FEMA · Jul 2026</span></li>
@@ -241,66 +232,23 @@
       </div>
     </section>
 
-    <section class="section wrap" aria-labelledby="ifaces-title">
-      <header class="section-head">
-        <h2 id="ifaces-title">On this site</h2>
-      </header>
-      <div class="table">
-        <div class="thead" aria-hidden="true">
-          <span>Port</span><span>Path</span><span>Description</span><span>Status</span>
-        </div>
-        <ul class="rows">
-          <li><a href="/portfolio/">
-            <span class="port">gi0/1</span>
-            <span class="path">/portfolio</span>
-            <span class="desc">Selected work: what it was, what I did, and how it turned out.</span>
-            <span class="status prov">provisioning</span>
-          </a></li>
-          <li><a href="/projects/">
-            <span class="port">gi0/2</span>
-            <span class="path">/projects</span>
-            <span class="desc">Things I'm building on my own time, finished or not.</span>
-            <span class="status planned">planned</span>
-          </a></li>
-          <li><a href="/writing/">
-            <span class="port">gi0/3</span>
-            <span class="path">/writing</span>
-            <span class="desc">Notes and longer pieces on what I'm learning.</span>
-            <span class="status planned">planned</span>
-          </a></li>
-          <li><a href="/now/">
-            <span class="port">gi0/4</span>
-            <span class="path">/now</span>
-            <span class="desc">What I'm focused on this month.</span>
-            <span class="status planned">planned</span>
-          </a></li>
-          <li><a href="#contact">
-            <span class="port">gi0/5</span>
-            <span class="path">/contact</span>
-            <span class="desc">Email is the best way to reach me.</span>
-            <span class="status up">up</span>
-          </a></li>
-        </ul>
-      </div>
-    </section>
-
     <section class="section wrap" id="contact" aria-labelledby="contact-title">
       <header class="section-head">
         <h2 id="contact-title">Contact</h2>
-        <p>Questions about infrastructure, a project, or comparing notes on a network design.</p>
+        <p>Peering, transit, a project, or comparing notes on a network design.</p>
       </header>
       <dl class="contact">
         <div>
-          <dt>email</dt>
+          <dt>Email</dt>
           <!-- TODO: confirm this address is set up for the herrell.us domain -->
           <dd><a href="mailto:hello@herrell.us">hello@herrell.us</a></dd>
         </div>
         <div>
-          <dt>linkedin</dt>
-          <dd><a href="https://www.linkedin.com/in/brayden-at-valor/">in/brayden-at-valor</a></dd>
+          <dt>LinkedIn</dt>
+          <dd><a href="https://www.linkedin.com/in/brayden-at-valor/">brayden-at-valor</a></dd>
         </div>
         <div>
-          <dt>github</dt>
+          <dt>GitHub</dt>
           <dd><a href="https://github.com/iambrayden">iambrayden</a></dd>
         </div>
       </dl>
@@ -309,7 +257,7 @@
 
   <footer class="foot wrap">
     <span>© <span id="year">2026</span> Brayden Herrell</span>
-    <span class="edge" id="edge" hidden></span>
+    <span>St. Louis, MO</span>
   </footer>
 
   <script src="/assets/main.js" defer></script>

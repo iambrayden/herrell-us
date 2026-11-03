@@ -25,6 +25,6 @@ The repo is connected to Cloudflare (Workers & Pages → Import a repository) wi
 
 Custom domain: in the Worker's Settings → Domains & Routes, add `herrell.us` (and `www.herrell.us` if you want it).
 
-Adding a section: create a folder such as `public/portfolio/index.html`, then edit that section's card in `public/index.html` (remove its `stamp` once the page is live).
+Adding a page: create a folder such as `public/projects/index.html`; it is served at `/projects/`.
 
 Photo: the hero headshot is `public/assets/photo.jpg` (square).
