@@ -87,6 +87,23 @@
           <dd>Colocation, dedicated servers, cloud compute, and IP transit</dd>
         </div>
       </dl>
+
+      <article class="case">
+        <header>
+          <p class="case-kicker">Network build · Valor Node</p>
+          <h3>St. Louis datacenter network redesign</h3>
+          <p class="case-sum">Colocation and dedicated-server clients shared one flat subnet and one gateway, with no isolation between customers. I designed the replacement: every client on their own VLAN and subnet, a rebuilt routing edge for AS33755, and a migration plan that moved clients over one at a time without dropping BGP.</p>
+        </header>
+        <ul class="case-points">
+          <li><strong>Segmentation.</strong> Per-client VLANs and /29 allocations with dedicated gateways, carried across Juniper EX4550 distribution and Arista 7050SX / 7048T switching.</li>
+          <li><strong>Routing edge.</strong> FRRouting on the edge router with full tables from upstream, dual-stack IPv4 / IPv6, and a cutover from 1G to 10G upstream.</li>
+          <li><strong>DDoS response.</strong> BGP communities, remotely triggered blackholing (RTBH), and FlowSpec.</li>
+          <li><strong>Customer BGP tunnels.</strong> BGP over GRE for customers bringing their own ASN, with ingress filtering by source ASN built from bgpq4 and nftables.</li>
+          <li><strong>Monitoring.</strong> LibreNMS polling the router and switches over a WireGuard management tunnel.</li>
+          <li><strong>Migration.</strong> Phased cutover, one client at a time, prefixes announced throughout, and a rollback defined for every step.</li>
+        </ul>
+        <ul class="tags"><li>BGP</li><li>FRRouting</li><li>Arista EOS</li><li>Junos</li><li>VLANs</li><li>IPv6</li><li>RTBH / FlowSpec</li><li>WireGuard</li><li>LibreNMS</li></ul>
+      </article>
     </section>
 
     <section class="section wrap" id="experience" aria-labelledby="exp-title">
@@ -137,33 +154,118 @@
         <p><a href="https://github.com/iambrayden">More on GitHub ↗</a></p>
       </header>
 
-      <ul class="projects">
-        <li class="project">
-          <h3><a href="https://github.com/iambrayden/vn-vpn">VN-VPN</a></h3>
-          <p>A self-hosted WireGuard VPN service. A management panel, a one-command agent that turns any Linux server into a VPN node, a customer portal with Stripe subscriptions, and per-server monitoring with alerts.</p>
-          <ul class="tags"><li>WireGuard</li><li>FastAPI</li><li>Stripe</li><li>Linux</li></ul>
-        </li>
-        <li class="project">
-          <h3><a href="https://github.com/iambrayden/CVE-2024-23113">FortiGate CVE-2024-23113 scanner</a></h3>
-          <p>Checks a list of client IPs for FortiGate devices exposed to CVE-2024-23113, so you can find and patch them before someone else does.</p>
-          <ul class="tags"><li>Python</li><li>Fortinet</li><li>Security</li></ul>
-        </li>
-        <li class="project">
-          <h3><a href="https://github.com/iambrayden/BGP">BGP toolkit</a></h3>
-          <p>Sets up a Debian box for BGP: installs bgpq4, BIRD, and Pathvector and turns on IPv4 forwarding.</p>
-          <ul class="tags"><li>BGP</li><li>BIRD</li><li>Pathvector</li></ul>
-        </li>
-        <li class="project">
-          <h3><a href="https://github.com/iambrayden/dns">DNS block lists</a></h3>
-          <p>Valor Node's curated block lists for malicious domains, newly registered domains, and adult content.</p>
-          <ul class="tags"><li>DNS</li><li>Security</li></ul>
-        </li>
-        <li class="project">
-          <h3><a href="https://github.com/iambrayden/ProxUI">ProxUI</a></h3>
-          <p>A better way to manage Proxmox.</p>
-          <ul class="tags"><li>Proxmox</li><li>Virtualization</li></ul>
-        </li>
-      </ul>
+      <div class="proj-group">
+        <h3>Infrastructure &amp; networking</h3>
+        <ul class="projects">
+          <li class="project">
+            <div class="project-head"><h4><a href="https://github.com/iambrayden/vn-vpn">VN-VPN</a></h4><span class="where">GitHub ↗</span></div>
+            <p>A self-hosted WireGuard VPN service: a management panel, a one-command agent that turns any Linux server into a VPN node, a customer portal with Stripe subscriptions, and per-server monitoring with alerts.</p>
+            <ul class="tags"><li>WireGuard</li><li>FastAPI</li><li>Stripe</li><li>Linux</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4>Postbound</h4><span class="where">Private</span></div>
+            <p>A managed SMTP relay for support teams. SMTP on 587 and an HTTP send API, automatic DKIM keys per domain, an SPF / DKIM / DMARC setup wizard, domain verification, suppression lists, and a searchable activity log.</p>
+            <ul class="tags"><li>SMTP</li><li>DKIM / SPF / DMARC</li><li>Node.js</li><li>SQLite</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4>WayMail Security</h4><span class="where">Private</span></div>
+            <p>A white-label client console for a Proxmox Mail Gateway. Clients get a clean dashboard under your brand, and no upstream branding, headers, or hostnames ever reach the browser. One-line Docker install with a setup wizard.</p>
+            <ul class="tags"><li>Email security</li><li>Proxmox Mail Gateway</li><li>Docker</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4>BlockServer</h4><span class="where">Private</span></div>
+            <p>A central IP blocklist: a small API manages IPv4 and IPv6 addresses and subnets in nftables sets, and client servers running CrowdSec report their bans back so every server blocks what one has seen.</p>
+            <ul class="tags"><li>nftables</li><li>CrowdSec</li><li>Python</li><li>Flask</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4><a href="https://github.com/iambrayden/CVE-2024-23113">FortiGate CVE-2024-23113 scanner</a></h4><span class="where">GitHub ↗</span></div>
+            <p>Checks a list of client IPs for FortiGate devices exposed to CVE-2024-23113, so they can be found and patched.</p>
+            <ul class="tags"><li>Python</li><li>Fortinet</li><li>Security</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4><a href="https://github.com/iambrayden/arin-waitlist-monitor">ARIN waitlist monitor</a></h4><span class="where">GitHub ↗</span></div>
+            <p>Watches ARIN’s IPv4 waiting list in a headless browser, finds your request by its timestamp, and emails you when your position changes.</p>
+            <ul class="tags"><li>Python</li><li>Playwright</li><li>ARIN</li><li>SMTP</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4><a href="https://github.com/iambrayden/BGP">BGP toolkit</a></h4><span class="where">GitHub ↗</span></div>
+            <p>Sets up a Debian box for BGP: installs bgpq4, BIRD, and Pathvector and turns on IPv4 forwarding.</p>
+            <ul class="tags"><li>BGP</li><li>BIRD</li><li>Pathvector</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4><a href="https://github.com/iambrayden/dns">DNS block lists</a></h4><span class="where">GitHub ↗</span></div>
+            <p>Valor Node’s curated block lists for malicious domains, newly registered domains, and adult content.</p>
+            <ul class="tags"><li>DNS</li><li>Security</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4><a href="https://github.com/iambrayden/ProxUI">ProxUI</a></h4><span class="where">GitHub ↗</span></div>
+            <p>A better way to manage Proxmox.</p>
+            <ul class="tags"><li>Proxmox</li><li>Virtualization</li></ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="proj-group">
+        <h3>Software</h3>
+        <ul class="projects two">
+          <li class="project">
+            <div class="project-head"><h4>RidgeCAD</h4><span class="where">Private</span></div>
+            <p>Computer-aided dispatch for search and rescue, roadside assistance, and security teams. A live dispatcher console with incidents and units on a map, a mobile field app that shares GPS and opens turn-by-turn navigation, and role-based admin.</p>
+            <ul class="tags"><li>React</li><li>Node.js</li><li>Socket.io</li><li>PostgreSQL</li><li>Mapbox</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4>MSP pricing calculator</h4><span class="where">Private</span></div>
+            <p>Builds MSP quotes from a service catalog of real vendor costs and suggested markups, then turns them into a client proposal.</p>
+            <ul class="tags"><li>JavaScript</li><li>Vite</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4>SettlementFinder</h4><span class="where">Private</span></div>
+            <p>Collects class action settlements and matches them to your profile, so you get notified about the ones you’re eligible to claim. An hourly scraper feeds the matching and notification jobs.</p>
+            <ul class="tags"><li>Next.js</li><li>PostgreSQL</li><li>Cron</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4>ChargeMyEV</h4><span class="where">Private</span></div>
+            <p>Finds EV chargers that fit your car and the adapters you carry, across 100,000+ stations, with a trip planner, favorites, and community reviews.</p>
+            <ul class="tags"><li>Next.js</li><li>Supabase</li><li>Leaflet</li><li>Open Charge Map</li></ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="proj-group">
+        <h3>Game projects</h3>
+        <ul class="projects">
+          <li class="project">
+            <div class="project-head"><h4>Blaine County Sheriff’s Office</h4><span class="where">blainecountyso.org</span></div>
+            <p>The department website for Last Chance Roleplay: public news and records requests, applications, the roster, staff training modules behind a login, leave requests, and an admin panel.</p>
+            <ul class="tags"><li>Node.js</li><li>Express</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4>San Andreas State Police</h4><span class="where">sasp.lcrpp.net</span></div>
+            <p>The agency website for Last Chance Roleplay, with a Cloudflare Worker that stores and serves bodycam footage from R2.</p>
+            <ul class="tags"><li>Cloudflare Workers</li><li>R2</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4><a href="https://github.com/iambrayden/bdev-restaurant">bdev-restaurant</a></h4><span class="where">GitHub ↗</span></div>
+            <p>Player-owned restaurants for Qbox FiveM servers: an in-game placement tool, a management tablet, a live kitchen, stock, staff, and finances.</p>
+            <ul class="tags"><li>Lua</li><li>FiveM</li><li>Qbox</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4><a href="https://github.com/iambrayden/bdev-trucking-company">bdev-trucking-company</a></h4><span class="where">GitHub ↗</span></div>
+            <p>Player-owned trucking companies: hire and certify staff, buy and insure a fleet, win loads on a shared bid board, and automate dispatch.</p>
+            <ul class="tags"><li>Lua</li><li>FiveM</li><li>Qbox</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4><a href="https://github.com/iambrayden/bdev-hearth">Hearth</a></h4><span class="where">GitHub ↗</span></div>
+            <p>A location-sharing app for the in-game phone: private circles, a live map, arrive / leave alerts for saved places, SOS, and crash detection.</p>
+            <ul class="tags"><li>Lua</li><li>FiveM</li><li>Qbox</li></ul>
+          </li>
+          <li class="project">
+            <div class="project-head"><h4><a href="https://github.com/iambrayden/bdev-bank-site">LEDGER</a></h4><span class="where">GitHub ↗</span></div>
+            <p>A read-only web dashboard for auditing a FiveM server’s economy: every citizen’s money, transactions, property, and vehicles, with suspicious activity flagged.</p>
+            <ul class="tags"><li>Web</li><li>MySQL</li></ul>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="section wrap" id="certifications" aria-labelledby="certs-title">
