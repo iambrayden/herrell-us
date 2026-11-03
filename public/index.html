@@ -4,104 +4,181 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brayden Herrell — herrell.us</title>
-  <meta name="description" content="Brayden Herrell's home on the internet: portfolio, projects, writing, and how to get in touch.">
+  <meta name="description" content="Brayden Herrell, network and software engineer: portfolio, projects, writing, and how to get in touch.">
   <meta property="og:title" content="Brayden Herrell">
-  <meta property="og:description" content="Brayden Herrell's home on the internet: portfolio, projects, writing, and how to get in touch.">
+  <meta property="og:description" content="Network and software engineer: portfolio, projects, writing, and how to get in touch.">
   <meta property="og:url" content="https://herrell.us/">
-  <meta name="theme-color" content="#3A1F2B">
+  <meta name="theme-color" content="#F4F7FB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0C1424" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <div class="band hero-band">
-    <header class="top wrap">
-      <a class="mark" href="/">herrell.us</a>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="/portfolio/">Portfolio</a></li>
-          <li><a href="/projects/">Projects</a></li>
-          <li><a href="/writing/">Writing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header class="top wrap">
+    <a class="mark" href="/"><span class="dim">bh@</span>herrell.us<span class="dim">:~$</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/portfolio/">/portfolio</a></li>
+        <li><a href="/projects/">/projects</a></li>
+        <li><a href="/writing/">/writing</a></li>
+        <li><a href="#contact">/contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main id="main">
     <section class="hero wrap" aria-labelledby="name">
-      <h1 id="name" class="name"><span>Brayden</span> <span>Herrell</span></h1>
-      <div class="intro">
-        <!-- Add a photo at assets/photo.jpg (square works best). Initials show until then. -->
-        <div class="portrait">
-          <span aria-hidden="true">BH</span>
-          <img src="/assets/photo.jpg" alt="Brayden Herrell" onerror="this.remove()">
-        </div>
-        <p>
-          Welcome in. This is where I keep everything: the work I'm proud of, the things I'm building on the side, what I'm thinking about, and the easiest way to reach me.
+      <div class="hero-text">
+        <p class="eyebrow">// network &amp; software engineer</p>
+        <h1 id="name">Brayden Herrell</h1>
+        <p class="lede">
+          I build networks and the software that runs on them. herrell.us is my home base: the work, the side projects, the notes, and how to reach me.
+        </p>
+        <p class="cta">
+          <a class="btn primary" href="/portfolio/">View portfolio</a>
+          <a class="btn" href="#contact">Get in touch</a>
         </p>
       </div>
+
+      <!-- Topology diagram: herrell.us as the core, each section as a connected node. -->
+      <figure class="topo" aria-hidden="true">
+        <svg viewBox="0 0 520 440" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="l1" d="M170 220 C 250 220, 240 50, 320 50"/>
+            <path id="l2" d="M170 220 C 250 220, 240 135, 320 135"/>
+            <path id="l3" d="M170 220 C 250 220, 240 220, 320 220"/>
+            <path id="l4" d="M170 220 C 250 220, 240 305, 320 305"/>
+            <path id="l5" d="M170 220 C 250 220, 240 390, 320 390"/>
+          </defs>
+
+          <use href="#l1" class="link prov"/>
+          <use href="#l2" class="link planned"/>
+          <use href="#l3" class="link planned"/>
+          <use href="#l4" class="link planned"/>
+          <use href="#l5" class="link up"/>
+
+          <circle class="packet" r="3.5"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#l1"/></animateMotion></circle>
+          <circle class="packet" r="3.5"><animateMotion dur="3.1s" repeatCount="indefinite" begin=".7s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#l2"/></animateMotion></circle>
+          <circle class="packet" r="3.5"><animateMotion dur="2.2s" repeatCount="indefinite" begin="1.3s"><mpath href="#l3"/></animateMotion></circle>
+          <circle class="packet" r="3.5"><animateMotion dur="2.9s" repeatCount="indefinite" begin=".3s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#l4"/></animateMotion></circle>
+          <circle class="packet up" r="3.5"><animateMotion dur="1.8s" repeatCount="indefinite" begin="1s"><mpath href="#l5"/></animateMotion></circle>
+
+          <g class="node core">
+            <rect x="14" y="186" width="156" height="68" rx="8"/>
+            <text x="30" y="214" class="n-title">herrell.us</text>
+            <text x="30" y="236" class="n-sub">core-01 · edge</text>
+            <circle cx="152" cy="208" r="4.5" class="led up"/>
+          </g>
+
+          <a href="/portfolio/" tabindex="-1"><g class="node">
+            <rect x="320" y="24" width="186" height="52" rx="8"/>
+            <text x="336" y="47" class="n-title">/portfolio</text>
+            <text x="336" y="64" class="n-sub">gi0/1 · provisioning</text>
+            <circle cx="490" cy="42" r="4.5" class="led prov"/>
+          </g></a>
+          <a href="/projects/" tabindex="-1"><g class="node">
+            <rect x="320" y="109" width="186" height="52" rx="8"/>
+            <text x="336" y="132" class="n-title">/projects</text>
+            <text x="336" y="149" class="n-sub">gi0/2 · planned</text>
+            <circle cx="490" cy="127" r="4.5" class="led planned"/>
+          </g></a>
+          <a href="/writing/" tabindex="-1"><g class="node">
+            <rect x="320" y="194" width="186" height="52" rx="8"/>
+            <text x="336" y="217" class="n-title">/writing</text>
+            <text x="336" y="234" class="n-sub">gi0/3 · planned</text>
+            <circle cx="490" cy="212" r="4.5" class="led planned"/>
+          </g></a>
+          <a href="/now/" tabindex="-1"><g class="node">
+            <rect x="320" y="279" width="186" height="52" rx="8"/>
+            <text x="336" y="302" class="n-title">/now</text>
+            <text x="336" y="319" class="n-sub">gi0/4 · planned</text>
+            <circle cx="490" cy="297" r="4.5" class="led planned"/>
+          </g></a>
+          <a href="#contact" tabindex="-1"><g class="node">
+            <rect x="320" y="364" width="186" height="52" rx="8"/>
+            <text x="336" y="387" class="n-title">/contact</text>
+            <text x="336" y="404" class="n-sub">gi0/5 · up</text>
+            <circle cx="490" cy="382" r="4.5" class="led up"/>
+          </g></a>
+        </svg>
+      </figure>
     </section>
-  </div>
 
-  <main id="main" class="wrap">
-    <h2 class="kicker">What's inside</h2>
+    <section class="ifaces wrap" aria-labelledby="ifaces-title">
+      <h2 id="ifaces-title" class="prompt"><span class="dim">bh@herrell.us:~$</span> show interfaces status</h2>
 
-    <ul class="cards">
-      <li class="card c-tangerine">
-        <a href="/portfolio/">
-          <h3>Portfolio</h3>
-          <p>Selected work: what it was, what I did, and how it turned out.</p>
-          <span class="go">herrell.us/portfolio</span>
-          <span class="stamp" aria-label="Status: next up">Next<br>up</span>
-        </a>
-      </li>
-      <li class="card c-rose">
-        <a href="/projects/">
-          <h3>Projects</h3>
-          <p>Things I'm building on my own time, finished or not.</p>
-          <span class="go">herrell.us/projects</span>
-          <span class="stamp" aria-label="Status: coming soon">Soon</span>
-        </a>
-      </li>
-      <li class="card c-butter">
-        <a href="/writing/">
-          <h3>Writing</h3>
-          <p>Notes and longer pieces on what I'm learning.</p>
-          <span class="go">herrell.us/writing</span>
-          <span class="stamp" aria-label="Status: coming soon">Soon</span>
-        </a>
-      </li>
-      <li class="card c-sage">
-        <a href="/now/">
-          <h3>Now</h3>
-          <p>What I'm focused on this month.</p>
-          <span class="go">herrell.us/now</span>
-          <span class="stamp" aria-label="Status: coming soon">Soon</span>
-        </a>
-      </li>
-    </ul>
+      <div class="table">
+        <div class="thead" aria-hidden="true">
+          <span>Port</span><span>Path</span><span>Description</span><span>Status</span>
+        </div>
+        <ul class="rows">
+          <li><a href="/portfolio/">
+            <span class="port">gi0/1</span>
+            <span class="path">/portfolio</span>
+            <span class="desc">Selected work: what it was, what I did, and how it turned out.</span>
+            <span class="status prov">provisioning</span>
+          </a></li>
+          <li><a href="/projects/">
+            <span class="port">gi0/2</span>
+            <span class="path">/projects</span>
+            <span class="desc">Things I'm building on my own time, finished or not.</span>
+            <span class="status planned">planned</span>
+          </a></li>
+          <li><a href="/writing/">
+            <span class="port">gi0/3</span>
+            <span class="path">/writing</span>
+            <span class="desc">Notes and longer pieces on what I'm learning.</span>
+            <span class="status planned">planned</span>
+          </a></li>
+          <li><a href="/now/">
+            <span class="port">gi0/4</span>
+            <span class="path">/now</span>
+            <span class="desc">What I'm focused on this month.</span>
+            <span class="status planned">planned</span>
+          </a></li>
+          <li><a href="#contact">
+            <span class="port">gi0/5</span>
+            <span class="path">/contact</span>
+            <span class="desc">Email is the best way to reach me.</span>
+            <span class="status up">up</span>
+          </a></li>
+        </ul>
+      </div>
+      <p class="legend">
+        <span><i class="led up"></i>up: live</span>
+        <span><i class="led prov"></i>provisioning: being built now</span>
+        <span><i class="led planned"></i>planned: coming later</span>
+      </p>
+    </section>
+
+    <section class="contact wrap" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>Questions, projects, or just comparing notes on a network design: send me a message.</p>
+      <div class="term">
+        <p class="prompt"><span class="dim">bh@herrell.us:~$</span> whois brayden</p>
+        <dl>
+          <dt>email</dt>
+          <!-- TODO: confirm this address is set up for the herrell.us domain -->
+          <dd><a href="mailto:hello@herrell.us">hello@herrell.us</a></dd>
+          <dt>linkedin</dt>
+          <dd><a href="https://www.linkedin.com/in/brayden-at-valor/">in/brayden-at-valor</a></dd>
+          <dt>github</dt>
+          <!-- TODO: replace with real profile URL -->
+          <dd><a href="https://github.com/">github.com</a></dd>
+        </dl>
+      </div>
+    </section>
   </main>
 
-  <div class="band contact-band">
-    <section class="contact wrap" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Write me a note</h2>
-      <p>I read everything that lands here, and I'm always glad to hear from people.</p>
-      <!-- TODO: confirm this address is set up for the herrell.us domain -->
-      <a class="email" href="mailto:hello@herrell.us">hello@herrell.us</a>
-      <ul class="elsewhere" aria-label="Elsewhere">
-        <!-- TODO: replace with real profile URLs -->
-        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-        <li><a href="https://github.com/">GitHub</a></li>
-      </ul>
-    </section>
-    <footer class="foot wrap">
-      <span>© <span id="year">2026</span> Brayden Herrell</span>
-      <span>herrell.us</span>
-    </footer>
-  </div>
+  <footer class="foot wrap">
+    <span>© <span id="year">2026</span> Brayden Herrell</span>
+    <span class="edge" id="edge" hidden></span>
+  </footer>
 
   <script src="/assets/main.js" defer></script>
 </body>
