@@ -27,4 +27,4 @@ Custom domain: in the Worker's Settings → Domains & Routes, add `herrell.us` (
 
 Adding a section: create a folder such as `public/portfolio/index.html`, then edit that section's card in `public/index.html` (remove its `stamp` once the page is live).
 
-Photo: drop a square image at `public/assets/photo.jpg` and it replaces the initials in the hero portrait.
+Photo: the hero headshot is `public/assets/photo.jpg` (square).
